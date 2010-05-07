@@ -1,0 +1,1 @@
+/home/local/mlb/.vim/include/vim-perl/ftplugin/perl6.vim
