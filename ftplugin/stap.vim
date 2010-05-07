@@ -1,0 +1,1 @@
+../include/systemtap/ftplugin/stap.vim
