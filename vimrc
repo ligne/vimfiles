@@ -2,26 +2,24 @@ syntax on
 
 set background=dark
 set autoindent
-set incsearch    " search-as-you-type
-set nohlsearch
-set linebreak
 set showcmd
 
-"set softtabstop=4
-
 set scrolloff=3
-
-autocmd BufRead *.txt set tw=0 
 
 " line numbering
 set number
 highlight LineNr ctermfg=darkgrey
 " F11 toggles wrapping long lines
 map <F11> :set number!<bar>set number?<CR>
+set linebreak
 
-" make variables a different colour to comments.
+" Make comments less garish
 highlight Comment ctermfg=darkgreen
 
+
+""" Search
+set incsearch    " search-as-you-type
+set nohlsearch
 " F5 toggles hlsearch
 map <F5> :set hls!<bar>set hls?<CR>
 
@@ -29,14 +27,11 @@ map <F5> :set hls!<bar>set hls?<CR>
 map <F10> :set wrap!<bar>set wrap?<CR>
 
 " cull trailing whitespace
-nmap <C-F10> :%s,\s\+$,,<CR>
-vmap <C-F10> :s,\s\+$,,<CR>
+nmap <silent> <C-F10> :%s,\s\+$,,e<CR>
+vmap <silent> <C-F10> :s,\s\+$,,e<CR>
 
-" feed selected content through perltidy
-vmap ,ptv :!perltidy<CR>
-
-" F12 toggles spellchecking
-set spelllang=en_gb
+" check spelling.  on by default, <F12> toggles
+set spell spelllang=en_gb
 map <F12> :set spell!<bar>set spell?<CR>
 
 " set up nice highlighting for nagios configs
@@ -44,18 +39,10 @@ map <F12> :set spell!<bar>set spell?<CR>
 au BufRead,BufNewFile  */nagios*/*.cfg set filetype=nagios
 au! Syntax nagios source ~/.vim/syntax/nagios.vim
 
-au BufRead,BufNewFile decimate.cfg set filetype=python
-au BufNewFile,BufRead *.tt2,*.html  set filetype=tt2html ts=2 expandtab
-"au BufRead,BufNewFile dhcpd.conf set filetype=dhcpd
-
 " highlight some useful terms in white-on-red
 autocmd ColorScheme * highlight Todo ctermfg=white ctermbg=red
-syn keyword mlbTodo contained containedin=Comment TODO FIXME NOTE DEBUG
+"syn keyword mlbTodo contained containedin=Comment TODO FIXME NOTE DEBUG
 "syn keyword mlbTodo TODO FIXME NOTE DEBUG
-highlight def link mlbTodo Todo
+"highlight def link mlbTodo Todo
 highlight Todo ctermfg=white ctermbg=red
-
-let perl_extended_vars = 1
-let perl_want_scope_in_variables = 1
-let perl_include_pod = 1
 
