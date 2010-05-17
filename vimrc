@@ -35,6 +35,13 @@ map <F10> :set wrap!<bar>set wrap?<CR>
 nmap <silent> <C-F10> :%s,\s\+$,,e<CR>
 vmap <silent> <C-F10> :s,\s\+$,,e<CR>
 
+" cycle fast through buffers
+nmap <C-PageUp>   :bn<CR>
+nmap <C-PageDown> :bp<CR>
+" and through errors
+"nmap <m-n> :cn<cr>
+"nmap <m-p> :cp<cr>
+
 " check spelling.  on by default, <F12> toggles
 set spell spelllang=en_gb
 map <F12> :set spell!<bar>set spell?<CR>
