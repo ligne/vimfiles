@@ -1,5 +1,5 @@
 " feed selected content through perltidy
-vmap ,ptv :!perltidy<CR>
+vmap ,pt :!perltidy<CR>
 
 let perl_extended_vars = 1
 let perl_want_scope_in_variables = 1
