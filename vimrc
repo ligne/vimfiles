@@ -45,8 +45,8 @@ vmap <silent> <C-F10> :s,\s\+$,,e<CR>
 nmap <C-PageUp>   :bn<CR>
 nmap <C-PageDown> :bp<CR>
 " and through errors
-"nmap <m-n> :cn<cr>
-"nmap <m-p> :cp<cr>
+nmap <m-PageDown> :cn<cr>
+nmap <m-PageUp>   :cp<cr>
 
 " check spelling.  on by default, <F12> toggles
 set spell spelllang=en_gb
