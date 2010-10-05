@@ -52,3 +52,10 @@ nmap <C-PageDown> :bp<CR>
 set spell spelllang=en_gb
 map <F12> :set spell!<bar>set spell?<CR>
 
+
+" Skeleton files.
+" Automatically set the package line in Perl modules.
+autocmd BufNewFile *.pm 0r ~/.vim/skeleton/perl.pm | $d | 1s/{{{PACKAGE}}}/\=ExpectedPackageName()/
+autocmd BufNewFile *.pl 0r ~/.vim/skeleton/perl.pl | $d
+autocmd BufNewFile *.t  0r ~/.vim/skeleton/perl.t  | $d
+
