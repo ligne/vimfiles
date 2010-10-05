@@ -1,0 +1,4 @@
+=head1 INTRODUCTION
+
+ligne's Vim configuration files.  L<http://github.com/ligne/vimfiles>
+
