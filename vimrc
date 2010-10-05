@@ -8,13 +8,19 @@ set scrolloff=3
 
 " line numbering
 set number
-highlight LineNr ctermfg=darkgrey
 " F11 toggles wrapping long lines
 map <F11> :set number!<bar>set number?<CR>
 set linebreak
 
-" Make comments less garish
+
+""" Highlighting
+
+" Make comments and line numbers less garish
 highlight Comment ctermfg=darkgreen
+highlight LineNr  ctermfg=darkgrey
+
+" Make TODO flags more garish
+highlight Todo ctermfg=white ctermbg=red
 
 
 """ Search
@@ -45,11 +51,4 @@ nmap <C-PageDown> :bp<CR>
 " check spelling.  on by default, <F12> toggles
 set spell spelllang=en_gb
 map <F12> :set spell!<bar>set spell?<CR>
-
-" highlight some useful terms in white-on-red
-autocmd ColorScheme * highlight Todo ctermfg=white ctermbg=red
-"syn keyword mlbTodo contained containedin=Comment TODO FIXME NOTE DEBUG
-"syn keyword mlbTodo TODO FIXME NOTE DEBUG
-"highlight def link mlbTodo Todo
-highlight Todo ctermfg=white ctermbg=red
 
