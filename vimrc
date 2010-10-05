@@ -48,8 +48,8 @@ nmap <C-PageDown> :bp<CR>
 nmap <m-PageDown> :cn<cr>
 nmap <m-PageUp>   :cp<cr>
 
-" check spelling.  on by default, <F12> toggles
-set spell spelllang=en_gb
+" <F12> toggles spell-checking
+set spelllang=en_gb
 map <F12> :set spell!<bar>set spell?<CR>
 
 
