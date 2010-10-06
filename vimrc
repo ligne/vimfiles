@@ -3,14 +3,15 @@ syntax on
 set background=dark
 set autoindent
 set showcmd
+set linebreak  " break lines at word boundaries
 
 set scrolloff=3
 
-" line numbering
+""" Line numbering
+
 set number
 " F11 toggles wrapping long lines
 map <F11> :set number!<bar>set number?<CR>
-set linebreak
 
 
 """ Highlighting
@@ -24,6 +25,7 @@ highlight Todo ctermfg=white ctermbg=red
 
 
 """ Search
+
 set incsearch    " search-as-you-type
 set nohlsearch
 " F5 toggles hlsearch
@@ -53,7 +55,8 @@ set spelllang=en_gb
 map <F12> :set spell!<bar>set spell?<CR>
 
 
-" Skeleton files.
+""" Skeleton files
+
 " Automatically set the package line in Perl modules.
 autocmd BufNewFile *.pm 0r ~/.vim/skeleton/perl.pm | $d | 1s/{{{PACKAGE}}}/\=ExpectedPackageName()/
 autocmd BufNewFile *.pl 0r ~/.vim/skeleton/perl.pl | $d
