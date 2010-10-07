@@ -1,3 +1,8 @@
+set nocompatible
+set history=1000
+set ruler
+set modeline  " debian turns this off by default.  it's annoying, even if it is safer.
+
 syntax on
 
 set background=dark
