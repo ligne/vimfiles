@@ -47,12 +47,17 @@ vmap <silent> <C-F10> :s,\s\+$,,e<CR>
 nmap <C-PageUp>   :bn<CR>
 nmap <C-PageDown> :bp<CR>
 " and through errors
-nmap <m-PageDown> :cn<cr>
-nmap <m-PageUp>   :cp<cr>
+nmap <M-PageDown> :cn<CR>
+nmap <M-PageUp>   :cp<CR>
 
 " <F12> toggles spell-checking
 set spelllang=en_gb
 map <F12> :set spell!<bar>set spell?<CR>
+
+
+""" Abbreviations
+
+iab ####  ################################################################################
 
 
 """ Skeleton files
