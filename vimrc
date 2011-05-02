@@ -41,6 +41,9 @@ set grepprg=ack
 
 """ Miscellanea
 
+" toggle case-sensitive search
+map <F9> :set ignorecase!<bar>set ignorecase?<CR>
+
 " F10 toggles wrapping long lines
 map <F10> :set wrap!<bar>set wrap?<CR>
 
