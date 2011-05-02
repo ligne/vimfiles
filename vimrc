@@ -68,6 +68,12 @@ map <F12> :set spell!<bar>set spell?<CR>
 iab ####  ################################################################################
 
 
+""" Commenting
+nmap ,# :s/^/# /<CR>
+nmap ,; :s/^/; /<CR>
+nmap ," :s/^/" /<CR>
+
+
 """ Skeleton files
 
 " Automatically set the package line in Perl modules.
